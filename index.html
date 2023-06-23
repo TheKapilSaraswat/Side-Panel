@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <style>
+            ul{
+                list-style: none;
+                background-color: black;
+                display: inline-block;
+                padding: 2vw;
+                border-radius: 12px;
+                margin: 2vw;
+                height: 30vw;
+            }
+            li{
+                background-color: darkgrey;
+                border-radius: 6px;
+                cursor: pointer;
+            }
+            li:hover{
+                background-color: burlywood;
+            }
+            p{
+                font-size: 2.5vw;
+                text-align: center;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                padding: 0.5vw;
+                color: darkslategray;
+            }
+            .inlineblock{
+                display: inline-block;
+            }
+            .hidden{
+                display: none;
+            }
+            .center{
+                align-content: center;
+                margin:8vw;
+            }
+            .flex{
+                display: flex;
+            }
+            .bgcolor{
+                background-color: darkgray;
+            }
+        </style>
+    <div class="flex">
+        <ul>
+            <li class="tab home">
+                <p>Home</p>
+            </li>
+            <li class="tab contact">
+                <p>Contact</p>
+            </li>
+            <li class="tab information">
+                <p>Information</p>
+            </li>
+            <li class="tab guide">
+                <p>Guide</p>
+            </li>
+        </ul>
+        <div class="inlineblock tablinks center hidden">
+            <p class="bgcolor">HOME</p>
+            <p1 class="textcenter"> Hey, Welcome Here. We are here to show you the home content of this website. The home is where the heart is and for landing page entries into websites, the home page is repeatedly the highest traffic page for organic search visitors and other non-paid marketing channels.</p1>
+        </div>
+        <div class="inlineblock tablinks center hidden">
+            <p class="bgcolor">CONTACT</p>
+            <p1 class="textcenter">In case, you want to give feedback or have any other issue,you can contact the Project team through the following contact or email: <br> Contact : 987091****<br>E-mail: mailme@gmailcom</p1>
+        </div>
+        <div class="inlineblock tablinks center hidden">
+            <p class="bgcolor">INFORMATION</p>
+            <p1 class="textcenter"> You can look for all the information here about the project. Showcasing the natural ingredients that go into making their products is an excellent way to generate trust with their consumers. It also confirms how committed Tarte is to using natural and safe ingredients in their cosmetics.</p1>
+        </div>
+        <div class="inlineblock tablinks center hidden">
+            <p class="bgcolor">GUIDE</p>
+            <p1 class="textcenter"> Hi, we are here to guide you about the whole project. One of the most valuable things that a company can have right now is a strong and consistent brand.
+
+                Consistent branding across all channels can increase revenue by 23%.
+                
+                But keeping a consistent brand is easier said than done, especially when your employees are spread across the globe or working from home.</p1>
+        </div>
+    </div>
+        <script>
+
+            for(let i=0;i<4;i++){
+                document.getElementsByClassName("tab")[i].onclick=function(){
+                    for(let j=0;j<4;j++){
+                        if(j!=i)
+                        document.getElementsByClassName("tablinks")[j].style.display="none";
+
+                    }
+                    document.getElementsByClassName("tablinks")[i].style.display="initial";
+                }
+            }
+        </script>
+    </body>
+</html>
